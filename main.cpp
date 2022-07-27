@@ -89,6 +89,7 @@ int main() {
                     break;
             }
         }
+
         std::erase_if(soundQueue,[](const auto& pair){return pair.second.getStatus()==sf::Sound::Stopped;});
 
         sf::VertexArray wave(sf::PrimitiveType::LineStrip, innerWindow.getSize().x*4);
